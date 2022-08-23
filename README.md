@@ -18,7 +18,8 @@ If you like this library, feel free to buy me a coffee!
 ## Import package and required method(s)
 ```
 import bazzellpy
-from bazzellpy import <method>
+from bazzellpy import functions
+from bazzellpy.function import <method/s>
 ```
 
 ## Search engines tool
