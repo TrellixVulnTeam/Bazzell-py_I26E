@@ -169,7 +169,7 @@ def twitter_user(query: str) -> dict:
         "Outgoing Tweets": f"https://twitter.com/search?q=from%3A{query}&f=live",
         "Incoming Tweets": f"https://twitter.com/search?q=to%3A{query}&f=live",
         "Media Tweets": f"https://twitter.com/{query}/media/",
-        "Liked Tweets": f"https://twitter.com/{query}/likes/"
+        "Liked Tweets": f"https://twitter.com/{query}/likes/",
         "Lists Created": f"https://twitter.com/{query}/lists/",
         "Lists Included": f"https://twitter.com/{query}/lists/memberships",
         "Moments": f"https://twitter.com/{query}/moments",
@@ -204,7 +204,7 @@ def twitter_user_year(query: str, year: str) -> dict:
     """
 
     Twitdict = {
-        "Outgoing by Year": f"https://twitter.com/search?q=from%3A{query}}%20since%3A{year}-01-01%20until%3A{year}-12-31&src=typd&f=live",
+        "Outgoing by Year": f"https://twitter.com/search?q=from%3A{query}%20since%3A{year}-01-01%20until%3A{year}-12-31&src=typd&f=live",
         "Incoming by Year": f"https://twitter.com/search?q=to%3A{query}%20since%3A{year}-01-01%20until%3A{year}-12-31&src=typd&f=live",
         "Media by Year": f"https://twitter.com/search?q=from%3A{query}%20since%3A{year}-01-01%20until%3A{year}-12-31%20filter%3Amedia&src=typd&f=live",
         "No Replies": f"https://twitter.com/search?q=from%3A{query}%20since%3A{year}-01-01%20until%3A{year}-12-31%20-filter%3Areplies&src=typd&f=live",
@@ -437,8 +437,8 @@ def community_query(query: str) -> dict:
         },
         "Ebay": {
             "User Account": f"https://www.ebay.com/usr/{query}",
-            "User Feedback": f"https://feedback.ebay.com/ws/eBayISAPI.dll?ViewFeedback2&userid={user}",
-            "User Items": f"https://www.ebay.com/sch/{user}",
+            "User Feedback": f"https://feedback.ebay.com/ws/eBayISAPI.dll?ViewFeedback2&userid={query}",
+            "User Items": f"https://www.ebay.com/sch/{query}",
             "Google Search": f"https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fwww.ebay.com%2Fusr+%22{query}%22"
         },
         "Pintrest": {
@@ -684,7 +684,10 @@ def name_query(forename: str, surname: str) -> dict:
 
 def doc_query(query: str) -> dict:
     """
-    
+    Return search engine queries for online documents containing a particular term
+
+    :param query: your search term
+    :return: query URLs in dict
     """
 
     Docdict = {
