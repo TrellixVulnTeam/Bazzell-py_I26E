@@ -651,7 +651,7 @@ def name_query(forename: str, surname: str) -> dict:
     Namedict = {
         "TruePeopleSearch": f'https://www.truepeoplesearch.com/results?name={forename}%20{surname}',
         "FastPeopleSearch": f'https://www.fastpeoplesearch.com/name/{forename}-{surname}',
-        "Nuwber": f'https://nuwber.com/search?name={forneame}%20{surname}',
+        "Nuwber": f'https://nuwber.com/search?name={forename}%20{surname}',
         "Xlek": f'https://xlek.com/search_results.php?fname={forename}&lname={surname}&locations:all',
         "FamilyTreeNow": f'https://www.familytreenow.com/search/genealogy/results?first={forename}&last={surname}',
         "Intelius People Search": f'https://www.intelius.com/people-search/{forename}-{surname}',
